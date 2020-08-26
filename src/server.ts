@@ -1,9 +1,11 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
 import express from 'express'
+import cors from 'cors'
+
 
 const app = express()
-
+app.use(cors())
 const PORT = process.env.PORT || 3535
 
 async function scrapeAmazon(search: string) {
